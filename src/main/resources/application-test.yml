@@ -1,0 +1,24 @@
+server:
+  port: 2222
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/linweili0615/activity-config.git
+          search-paths: activity-config
+          force-pull: true
+          username: 295287765@qq.com
+          password: linweili123
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+  instance:
+    ip-address: 10.100.97.31
+    prefer-ip-address: true
