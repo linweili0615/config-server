@@ -1,5 +1,5 @@
 server:
-  port: 2222
+  port: 8888
 spring:
   application:
     name: config-server
@@ -7,11 +7,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/linweili0615/activity-config.git
-          search-paths: activity-config
+          uri: https://github.com/linweili0615/cloud-config.git
+          search-paths: /{application}
           force-pull: true
           username: 295287765@qq.com
           password: linweili123
+          default-label: master
 
 eureka:
   client:
