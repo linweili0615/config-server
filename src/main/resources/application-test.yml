@@ -1,13 +1,2 @@
 server:
   port: 8888
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/linweili0615/cloud-config.git
-          search-paths: /{application}
-          force-pull: true
-          username: 295287765@qq.com
-          password: linweili123
-          default-label: master

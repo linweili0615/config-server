@@ -4,9 +4,18 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active: test
-
+#  profiles:
+#    active: test
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/linweili0615/cloud-config.git
+          search-paths: /{application}
+          force-pull: true
+          username: 295287765@qq.com
+          password: linweili123
+          default-label: master
 eureka:
   client:
     register-with-eureka: true
@@ -16,3 +25,4 @@ eureka:
   instance:
     ip-address: 10.100.97.31
     prefer-ip-address: true
+
